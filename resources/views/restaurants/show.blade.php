@@ -25,7 +25,7 @@
         @forelse ($restourant->foods as $f)
         <div class="col-12 col-md-6 col-lg-3">
             <div class="card bg-dark border-secondary border-opacity-25 h-100 shadow-sm p-2 text-center">
-                <img src="/img/{{ $f->type == 'drink' ? 'drink-3.png' : 'food-icon.jpg' }}" class="card-img-top rounded-4 p-2" alt="">
+                <img src="/img/{{ $f->type == 'drink' ? 'drink.png' : 'food.jpg' }}" class="card-img-top rounded-4 p-2" alt="">
                 <div class="card-body">
                     <h5 class="text-white fw-bold">{{ $f->name }}</h5>
                     <p class="text-warning fw-bold">{{ $f->price }} TMT</p>

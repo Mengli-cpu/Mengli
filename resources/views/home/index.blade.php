@@ -11,7 +11,7 @@
         @foreach ($restaurants as $r)
         <div class="col-12 col-md-6 col-lg-2">
             <div class="card bg-dark border-secondary h-100 shadow-sm hover-effect position-relative">
-                <img src="/img/restaurant-2.png" class="card-img-top p-2 rounded-4" alt="{{ $r->name }}">
+                <img src="{{ asset('/img/restaurant.png') }}" class="card-img-top p-2 rounded-4" alt="{{ $r->name }}">
 
                 <div class="card-body text-light text-center">
                     <h5 class="card-title fw-bold">{{ $r->name }}</h5>
@@ -55,9 +55,9 @@
             <div class="card border-0 h-100 shadow rounded-4 overflow-hidden food-card-modern position-relative">
                 <div class="position-relative p-3">
                     @if ($f->type == 'drink')
-                    <img src="/img/drink-3.png" class="img-fluid w-100 rounded-4 shadow" alt="{{ $f->name }}">
+                    <img src="{{ asset('/img/drink.png') }}" class="img-fluid w-100 rounded-4 shadow" alt="{{ $f->name }}">
                     @else
-                    <img src="/img/food-icon.jpg" class="img-fluid w-100 rounded-4 shadow" alt="{{ $f->name }}">
+                    <img src="{{ asset('/img/food.jpg') }}" class="img-fluid w-100 rounded-4 shadow" alt="{{ $f->name }}">
                     @endif
                     @php
                     $color = match($f->category->name ?? '') {

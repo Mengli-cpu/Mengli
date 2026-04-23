@@ -11,7 +11,7 @@
     <div class="row g-5 align-items-center">
         <div class="col-lg-4">
             <div class="position-relative p-3 bg-dark border border-secondary border-opacity-25 rounded-5 shadow-lg">
-                <img src="/img/{{ $food->type == 'drink' ? 'drink-3.png' : 'food-icon.jpg' }}"
+                <img src="/img/{{ $food->type == 'drink' ? 'drink.png' : 'food.jpg' }}"
                     class="img-fluid rounded-5 w-100 shadow" alt="{{ $food->name }}">
                 <span class="position-absolute top-0 start-0 m-5 badge bg-warning text-black px-3 py-2 rounded-pill shadow">
                     {{ $food->category->name ?? 'General' }}

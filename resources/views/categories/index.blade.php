@@ -35,7 +35,7 @@
                         <div class="card bg-dark border-secondary border-opacity-25 h-100 shadow-sm p-2">
                             <div class="d-flex align-items-center">
                                 <div style="width: 100px;">
-                                    <img src="/img/{{ $f->type == 'drink' ? 'drink-3.png' : 'food-icon.jpg' }}" class="img-fluid rounded-3" alt="">
+                                    <img src="/img/{{ $f->type == 'drink' ? 'drink.png' : 'food.jpg' }}" class="img-fluid rounded-3" alt="">
                                 </div>
                                 <div class="ms-3 flex-grow-1">
                                     <h6 class="text-white fw-bold mb-1">{{ $f->name }}</h6>

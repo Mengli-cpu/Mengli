@@ -11,7 +11,7 @@
         @foreach ($restaurants as $r)
         <div class="col-12 col-md-6 col-lg-2">
             <div class="card bg-dark border-secondary h-100 shadow-sm hover-effect position-relative">
-                <img src="/img/restaurant-2.png" class="card-img-top p-2 rounded-4" alt="{{ $r->name }}">
+                <img src="{{ asset('/img/restaurant.png') }}" class="card-img-top p-2 rounded-4" alt="{{ $r->name }}">
 
                 <div class="card-body text-light text-center">
                     <h5 class="card-title fw-bold">{{ $r->name }}</h5>

@@ -334,3 +334,26 @@ html {
 body {
     background: #0f0f12;
 }
+
+.food-card-modern {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.food-card-modern:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255, 193, 7, 0.2) !important;
+}
+
+.food-card-modern:hover .btn-warning {
+    background-color: #ffca2c;
+    border-color: #ffc720;
+}
+.pagination nav > div:first-child {
+    display: none !important;
+}
+
+.pagination nav > div:last-child {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

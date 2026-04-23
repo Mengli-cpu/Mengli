@@ -26,6 +26,7 @@ class CategorySeeder extends Seeder
             'Drinks',
             'Coffee & Tea',
             'Healthy Food',
+            'Hot meals',
             'Others',
         ];
 

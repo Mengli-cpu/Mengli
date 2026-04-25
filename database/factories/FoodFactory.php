@@ -25,7 +25,7 @@ class FoodFactory extends Factory
             'name' => fake()->randomElement(['Merjimek', 'Pizza', 'Burger', 'Kebab', 'Somsa', 'Pasta',"Chorba", 'Salad']),
             'price' => fake()->numberBetween(20, 500),
             'code' => fake()->bothify('##??#?##'),
-            'like_count' => fake()->numberBetween(0, 5000),
+            'like_count' => fake()->numberBetween(0, 10000),
             'category_id' => Category::inRandomOrder()->first()->id,
             'restaurant_id' => Restourant::inRandomOrder()->first()->id,
             'type' => fake()-> randomElement($type)

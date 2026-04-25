@@ -147,12 +147,12 @@ class RestourantSeeder extends Seeder
             // ],
         ];
 
-        foreach ($restaurants as $i) {
+        foreach ($restaurants as $rs) {
             \App\Models\Restourant::create([
-                'name' => $i['name'],
-                'address' => $i['address'],
-                'rating' => $i['rating'],
-                'phone_num' => $i['phone_num'],
+                'name' => $rs['name'],
+                'address' => $rs['address'],
+                'rating' => $rs['rating'],
+                'phone_num' => $rs['phone_num'],
             ]);
         }
     }

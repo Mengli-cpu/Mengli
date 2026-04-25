@@ -150,15 +150,15 @@ class FoodSeeder extends Seeder
             ],
         ];
 
-        foreach ($foods as $i) {
+        foreach ($foods as $fs) {
             \App\Models\Food::create([
-                'category_id' => $i['category_id'],
-                'restaurant_id' => $i['restaurant_id'],
-                'name' => $i['name'],
-                'price' => $i['price'],
-                'code' => $i['code'],
-                'like_count' => $i['like_count'],
-                'type' => $i['like_count'],
+                'category_id' => $fs['category_id'],
+                'restaurant_id' => $fs['restaurant_id'],
+                'name' => $fs['name'],
+                'price' => $fs['price'],
+                'code' => $fs['code'],
+                'like_count' => $fs['like_count'],
+                'type' => $fs['like_count'],
             ]);
         }
     }

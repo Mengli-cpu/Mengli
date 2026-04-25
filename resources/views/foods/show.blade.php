@@ -36,12 +36,12 @@
                     </div>
                 </div>
                 <div class="row g-3">
-                    <div class="col-sm-8 d-flex">
+                    <div class="col-sm-8 d-flex align-items-center">
                         <button class="btn btn-warning w-100 py-3 rounded-pill fw-bold shadow">
                             <i class="bi bi-cart-plus me-2"></i> Add to Order
                         </button>
-                        <button class="btn btn-outline-light p-3 rounded-pill mx-3">
-                            <i class="bi bi-heart text-danger h5"></i>
+                        <button class="btn btn-outline-danger pt-3 pb-2 px-3 rounded-circle mx-3">
+                            <i class="bi bi-heart h5"></i>
                         </button>
                         {{ $food->like_count }}
                     </div>

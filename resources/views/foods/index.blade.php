@@ -14,6 +14,38 @@
             </span>
         </span>
     </div>
+    <div class="mb-5 justify-content-center">
+        <div class="row">
+            <form action="/foods" method="GET" class="row g-2 shadow-sm p-3 bg-dark rounded-4 border border-secondary border-opacity-25">
+                <div class="col-md-3">
+                    <input type="text" name="search" class="form-control custom-focus bg-black text-white border-0 rounded-pill px-4"
+                        placeholder="Search" value="{{ request('search') }}">
+                </div>
+                <div class="col-md-3">
+                    <select name="category" class="form-select custom-focus bg-black text-white border-0 rounded-pill px-3">
+                        <option value="" {{ !request('category') ? 'selected' : '' }}>All Categories</option>
+                        @foreach($categories as $cat)
+                        <option value="{{ $cat->id }}" {{ (string)request('category') === (string)$cat->id ? 'selected' : '' }}>
+                            {{ $cat->name }}
+                        </option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <select name="sort" class="form-select custom-focus bg-black text-white border-0 rounded-pill px-3">
+                        <option value="" {{ !request('sort') ? 'selected' : '' }}>Sort by Default</option>
+                        <option value="popular" {{ request('sort') == 'popular' ? 'selected' : '' }}>Popular</option>
+                        <option value="random" {{ request('sort') == 'random' ? 'selected' : '' }}>Random</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <button type="submit" class="btn btn-warning w-100 rounded-pill fw-bold text-dark">
+                        <i class="bi bi-filter me-2"></i>Apply
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
 
     <div class="row g-4">
         @foreach ($foods as $f)
@@ -46,6 +78,7 @@
                     </div>
                     <p class="text-white-50 small mb-4">
                         <i class="bi bi-shop text-info me-1"></i> {{ $f->restourant->name ?? 'Restaurant' }}
+                        <i class="bi bi-heart-fill text-danger me-1 ms-2"></i> {{ $f->like_count ?? '0' }}
                     </p>
                     <a href="/foods/show/{{ $f->id }}" class="btn btn-warning w-100 rounded-3 fw-bold py-2 shadow-sm text-dark stretched-link">
                         Order Now
@@ -65,4 +98,5 @@
     </div>
 
 </div>
+
 @endsection

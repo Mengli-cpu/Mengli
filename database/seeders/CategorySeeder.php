@@ -31,9 +31,9 @@ class CategorySeeder extends Seeder
         ];
 
 
-        foreach ($categories as $i) {
+        foreach ($categories as $cs) {
             \App\Models\Category::create([
-                'name' => $i
+                'name' => $cs
             ]);
         }
     }

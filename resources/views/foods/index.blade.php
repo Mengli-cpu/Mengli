@@ -39,9 +39,12 @@
                     </select>
                 </div>
                 <div class="col-md-3">
-                    <button type="submit" class="btn btn-warning w-100 rounded-pill fw-bold text-dark">
+                    <button type="submit" class="btn btn-warning rounded-pill fw-bold text-dark">
                         <i class="bi bi-filter me-2"></i>Apply
                     </button>
+                    <a href="/foods" class="btn btn-secondary rounded-pill fw-bold">
+                        <i class="bi bi-closed me-2"></i>Reset
+                    </a>
                 </div>
             </form>
         </div>

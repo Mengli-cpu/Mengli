@@ -16,7 +16,7 @@
                 <div class="card-body text-light text-center">
                     <h5 class="card-title fw-bold">{{ $r->name }}</h5>
                     <div class="rating-wrapper">
-                        @php $rating =$r->rating ?? 4.8; @endphp
+                        @php $rating = $r->rating ?? 4.8; @endphp
                         @for ($i = 1; $i <= 5; $i++)
                             <div class="star-container" style="position: relative; display: inline-block;">
                             <i class="bi bi-star-fill text-secondary"></i>
